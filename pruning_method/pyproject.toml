@@ -1,0 +1,13 @@
+[project]
+name = "my_method"
+version = "0.1.0"
+
+dependencies = [
+    "nerfstudio==1.1.5"
+]
+
+[tool.setuptools.packages.find]
+include = ["my_method*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+pruning-method = 'my_method.my_config:MyMethod'
